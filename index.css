@@ -1,0 +1,54 @@
+* {
+   font-family: sans-serif;
+   outline: 0;
+   padding: 0;
+}
+
+@keyframes ScaleBody {
+   0% { 
+     background-position: 0% 50%;
+   }
+   50% { 
+     background-position: 100% 50%; 
+   }
+   100% { 
+     background-position: 0% 50%; 
+   }
+ }
+ 
+ body {
+   background: linear-gradient(270deg, rgb(0, 89, 255), rgb(0, 247, 255)); 
+   background-size: 200% 200%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   min-height: 100vh;
+   align-items: center;
+   animation: ScaleBody 2.5s ease infinite;
+ }
+
+section.div {
+   border: 2.5px solid;
+   background-color: white;
+   transform: scale(1%);
+   border-radius: 10px;
+   overflow: hidden;
+   animation: Scale 0.5s forwards ease;
+}
+.button {
+   cursor: pointer;
+   background: linear-gradient(to right, rgb(158, 158, 255), rgb(117, 117, 255));
+   border: 0;
+   position: absolute;
+   top: 93%;
+   left: 35%;
+}
+
+@keyframes Scale {
+   from {
+      scale: 1%;
+   }
+   to {
+      scale: 20000%;
+   }
+}
